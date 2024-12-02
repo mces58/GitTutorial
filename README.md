@@ -10,7 +10,7 @@
 
 ---
 
-:bulb:**Before diving into Git usage, let's take a look at some essential terminal commands.**
+&#128161;_**Before diving into Git usage, let's take a look at some essential terminal commands.**_
 
 #### Here are some basic terminal commands:
 
@@ -50,7 +50,7 @@
 
 ---
 
-&#128073; **Now that we have covered the basic terminal commands, we can move on to Git commands.**
+&#128073; _**Now that we have covered the basic terminal commands, we can move on to Git commands.**_
 
 | Command                         | Description                                                                                                                                                  |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -77,3 +77,61 @@
 | [`git fetch`](#git_fetch)       | It is used to fetch new information from a remote Git repository to the local repository, but it does not make any changes to the current working directory. |
 | [`git pull`](#git_pull)         | It is used to pull the latest information from a remote Git repository and apply these updates to your local working directory and current branch.           |
 | [`git stash`](#git_stash)       | It is used to temporarily store changes you are working on but haven't committed yet, and to clean your working directory.                                   |
+
+---
+
+&#128064; _**Now let's look at the commands in more detail.**_
+
+<h3 id="git_config"><ins>01 Git Configuration</ins></h3>
+
+<details>
+  <summary><code>git help</code></summary>
+    <ul>
+      <blockquote>
+        This command typically opens the help documentation related to Git commands. Additionally, you can use <code>git help -a</code> to display an alphabetical list of all Git commands. 
+        This provides a quick overview of all Git commands.
+      </blockquote>
+    </ul>
+</details>
+<details>
+  <summary><code>git config --global user.name "your name"</code></summary>
+    <ul>
+      <blockquote>
+        It is used to configure Git settings. This command is used to set the username and is typically defined as a global setting, meaning the username applies to all Git projects on the system.
+      </blockquote>
+      <blockquote>
+        This setting is important for specifying which user made the changes, especially during commit operations.
+      </blockquote>
+    </ul>
+</details>
+<details>
+  <summary><code>git config --global user.email "your-email@example.com"</code></summary>
+    <ul>
+      <blockquote>
+        It is used to configure Git settings. This command is used to set the user's email address and is typically defined as a global setting, meaning the email address applies to all Git projects on the system.
+      </blockquote>
+      <blockquote>
+        This setting is important for specifying which user made the changes, especially during commit operations.
+      </blockquote>
+    </ul>
+</details>
+<details>
+  <summary><code>git config --global core.editor "code -w"</code></summary>
+    <ul>
+      <blockquote>
+        This is used to set the user-defined text editor for Git. In this example, it specifies the use of Visual Studio Code (<code>code</code>), and the <code>-w</code> option ensures that Git waits for the editor to close before proceeding. 
+        This means you can continue with commit messages or other editing tasks without waiting for Visual Studio Code to close.
+      </blockquote>
+    </ul>
+</details>
+<details>
+  <summary><code>git config --list(-l)</code></summary>
+    <ul>
+      <blockquote>
+        Used to list Git configuration settings. This command displays the configuration settings and values used by Git.
+      </blockquote>
+      <blockquote>
+        For example, you can use this command to view the username, email address, color preferences, and other settings defined in the Git configuration. The output is typically in <code>key=value</code> format and includes the configured settings for Git.
+      </blockquote>
+    </ul>
+</details>
