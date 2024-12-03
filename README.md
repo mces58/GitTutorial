@@ -104,6 +104,7 @@
       </blockquote>
     </ul>
 </details>
+
 <details>
   <summary><code>git config --global user.email "your-email@example.com"</code></summary>
     <ul>
@@ -115,6 +116,7 @@
       </blockquote>
     </ul>
 </details>
+
 <details>
   <summary><code>git config --global core.editor "code -w"</code></summary>
     <ul>
@@ -124,6 +126,7 @@
       </blockquote>
     </ul>
 </details>
+
 <details>
   <summary><code>git config --list(-l)</code></summary>
     <ul>
@@ -135,3 +138,62 @@
       </blockquote>
     </ul>
 </details>
+
+---
+
+<h3><ins>02 Starting a Project</ins></h3>
+
+<details>
+  <summary><code id="git_init">git init [project name]</code></summary>
+    <ul>
+      <blockquote>
+        Used to initialize an existing directory as a Git repository. If [project name] is specified, a folder with this name is created, and the Git repository is initialized within this folder.
+      </blockquote>
+<pre><code>mkdir my_project
+cd my_project</code></pre>
+     <li>
+        Now, let's initialize this directory as a Git repository using the <code>git init</code> command:
+     </li>
+<pre><code>git init</code></pre>
+    <li>
+        This process turns the current directory into an empty Git repository. You can now track files in this directory, commit changes, and use Git's version control features. 
+        If you use <code>git init my_project</code>, a folder named <code>my_project</code> will be created, and the Git repository will be initialized inside that folder.
+    </li>
+    <li>
+        When the <code>git init</code> command is executed, Git initializes the current directory as a Git repository and adds a subdirectory named <code>.git</code>. 
+        This subdirectory contains all the information and configuration settings for the Git repository. Therefore, running the <code>git init</code> command creates a 
+        Git repository and generates the <code>.git</code> directory that holds all the related information.
+    </li>
+    <li>
+        However, if you want to undo this process and delete the Git repository, simply deleting the <code>.git</code> directory is enough. However, this action is irreversible, 
+        and you will lose all history, commit information, branch structures, and other related data. Therefore, you should proceed with caution when deleting the directory.
+    </li>
+    <li>
+        For example, after creating a Git repository, you can follow the steps below to delete the repository (use with caution):
+    </li>
+<pre><code>rm -rf .git</code></pre>
+    <li>
+        This command completely deletes the <code>.git</code> directory in the current directory.
+    </li>
+    <li>
+        When the <code>-r (recursive)</code> and <code>-f (force)</code> options are included, it deletes the specified directory, along with all files and subdirectories 
+        within it, without prompting for confirmation.
+    </li>
+   </ul>
+</details>
+
+<details>
+  <summary><code id="git_clone">git clone &lt;project url&gt;</code></summary>
+    <ul>
+      <blockquote>
+        Used to copy a project from a remote Git repository to a local machine. This command downloads the specified Git repository in its entirety and creates a local copy. The <code>&lt;project url&gt;</code> represents the URL of the Git repository to be cloned.
+      </blockquote>
+      <li>As an example, to clone a GitHub repo:</li>
+<pre><code>git clone https://github.com/user/repo-path.git</code></pre>
+      <li>
+      This command downloads the specified GitHub repository and creates a folder named <code>repository-name</code> in the current directory, copying the contents into it. This allows you to use the entire project on your local machine and make changes to it.
+      </li>
+   </ul>
+</details>
+
+---
