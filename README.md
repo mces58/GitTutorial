@@ -310,3 +310,34 @@ git dif feature-branch</code></pre>
     <small>This command shows the differences between the feature-branch branch and the current state.</small>
    </ol>
 </details>
+
+<details>
+  <summary><code id="git_checkout">git checkout -- [file]</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git checkout</code> command is used to switch between branches, view commits, create new branches, and revert files in the working 
+        directory within a Git repository. However, starting from Git 2.23, the <code>git switch</code> and <code>git restore</code> commands have taken over some 
+        of the responsibilities of <code>git checkout</code>. Here are the basic uses of the <code>git checkout</code> command:
+      </blockquote>
+      <li><h4>Changing Branch:</h4></li>
+<pre><code># git checkout branch_name
+git checkout main</code></pre>
+      <small>This command switches to the <code>main</code> branch.</small>
+      <li><h4>Creating a New Branch and Changing:</h4></li>
+<pre><code># git checkout -b new_branch_name
+git checkout -b feature-xyz</code></pre>
+    <small>This command creates a new branch named <code>feature-xyz</code> and automatically switches to this branch.</small>
+    <li><h4>Reverting Files to a Specific Commit or Branch State:</h4></li>
+<pre><code># git checkout -- file_name
+git checkout -- index.html</code></pre>
+    <small>This command rolls the <code>index.html</code> file back to its last commit state.</small>
+    <li><h4>Going to a Specific Commit:</h4></li>
+<pre><code># git checkout commit_id
+git checkout abc123</code></pre>
+    <small>This command is used to go to the <code>abc123</code> commit id.</small>
+    <li><h4>Viewing the State of a Specific Commit on a Specific Branch:</h4></li>
+<pre><code># git checkout branch_name -- file_name
+git checkout main -- index.html</code></pre>
+    <small>This command puts the <code>index.html</code> file of the <code>main</code> branch into a specific commit state.</small>
+   </ol>
+</details>
