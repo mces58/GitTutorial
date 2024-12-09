@@ -341,3 +341,30 @@ git checkout main -- index.html</code></pre>
     <small>This command puts the <code>index.html</code> file of the <code>main</code> branch into a specific commit state.</small>
    </ol>
 </details>
+
+<details>
+  <summary><code id="git_switch">git switch</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git switch</code> command, introduced in Git version 2.23, is designed for switching between branches. This command allows you to 
+        move from the current branch to another branch. It replaces the <code>git checkout</code> command for branch switching, providing a safer and 
+        more explicit tool. Here are the basic usages and examples of the <code>git switch</code> command:
+      </blockquote>
+      <li><h4>Switching to Branch:</h4></li>
+<pre><code># git switch branch_name
+git switch feature-branch</code></pre>
+      <small>This command switches to the branch named <code>feature-branch</code>.</small>
+      <li><h4>Creating and Switching to a Branch:</h4></li>
+<pre><code># git switch -c new_branch_name
+git switch -c new-feature</code></pre>
+    <small>This command creates a new branch named <code>new-feature</code> and switches to this branch.</small>
+    <li><h4>Match and Switch to a Remote Branch with the Current Branch:</h4></li>
+<pre><code># git switch --track remote_repo_name/remote_branch_name
+git switch --track origin/main</code></pre>
+    <small>This command matches the current branch with a branch in the remote repository and switches to this branch.</small>
+    <li><h4>Saving Changes Before Switching Branches:</h4></li>
+<pre><code># git switch -c new_branch_name --discard-changes
+git switch -c new-feature --discard-changes</code></pre>
+    <small>This command creates a new branch named <code>new-feature</code>, but does not save changes to the existing branch.</small>
+   </ol>
+</details>
