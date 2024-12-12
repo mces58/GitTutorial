@@ -368,3 +368,27 @@ git switch -c new-feature --discard-changes</code></pre>
     <small>This command creates a new branch named <code>new-feature</code>, but does not save changes to the existing branch.</small>
    </ol>
 </details>
+
+<details>
+  <summary><code id="git_commit">git commit</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git commit</code> command is used to permanently save changes in your working directory. Here are the basic uses and some examples 
+        of the <code>git commit</code> command:
+      </blockquote>
+      <li><h4>Basic Commit Process:</h4></li>
+<pre><code># git commit -m "Commit Description"
+git commit -m "Update homepage design"</code></pre>
+      <small>The <code>git commit</code> command allows you to permanently save changes that are staged (in the Staging Area).</small>
+      <small>When used with the <code>-m</code> parameter, you can add a commit message. The message is important for describing the changes you have made.</small>
+      <li><h4>Committing All Files in the Staging Area:</h4></li>
+<pre><code>git commit -a -m "Update all files"</code></pre>
+    <small>If you want to commit all changes in the Staging Area, you can use the <code>-a</code> (all) parameter. This commits all changes 
+    to tracked files without needing to explicitly stage them.</small>
+    <small>However, be cautious when using this method, as it does not include untracked new files in the commit.</small>
+    <li><h4>Editing Changes:</h4></li>
+<pre><code>git commit --amend -m "fix: Commit Description"</code></pre>
+    <small>If you notice an error in your last commit or need to change the commit message, you can use the <code>--amend</code> parameter.</small>
+    <small>This command updates your most recent commit.</small>
+   </ol>
+</details>
