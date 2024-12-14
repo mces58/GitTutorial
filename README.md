@@ -392,3 +392,22 @@ git commit -m "Update homepage design"</code></pre>
     <small>This command updates your most recent commit.</small>
    </ol>
 </details>
+
+<details>
+  <summary><code id="git_rm">git rm [file]</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git rm</code> command removes a file or directory from version control in a repository. The removed file or directory will 
+        no longer be tracked, and this change will take effect in the next commit. However, the file or directory is not physically deleted; it is only untracked.
+      </blockquote>
+      <li><h4>Stop Tracking the File:</h4></li>
+<pre><code># git rm file_name
+git rm myFile.txt</code></pre>
+      <small>This command stops tracking the <code>myfile.txt</code> file, and the change will take effect in the next commit.</small>
+      <li><h4>Stop Tracking and Remove the File:</h4></li>
+<pre><code># git rm -f file_name
+git rm -f myFile.txt</code></pre>
+    <small>This command both stops tracking the <code>myfile.txt</code> file and physically deletes it. The <code>-f</code> option forces the 
+    deletion, even if the file has been modified.</small>
+  </ol>
+</details>
