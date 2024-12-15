@@ -411,3 +411,43 @@ git rm -f myFile.txt</code></pre>
     deletion, even if the file has been modified.</small>
   </ol>
 </details>
+
+---
+
+<h3><ins>04 Storing Your Work</ins></h3>
+
+<details>
+  <summary><code id="git_stash">git stash</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git stash</code> command is used to temporarily save changes in the current branch. This is useful when you want to save your 
+        work without committing it, allowing you to switch branches or work on something else without losing progress. 
+        Here are the basics of <code>git stash</code> usage and examples:
+      </blockquote>
+      <li><h4>Saving Changes:</h4></li>
+<pre><code>git stash</code></pre>
+      <small><code>git stash</code> saves all changes in the working directory to a temporary storage location called a stash. 
+      This allows you to return your current branch to a clean state while keeping your changes safe for later use.</small>
+      <li><h4>Viewing the Stash List:</h4></li>
+<pre><code>git stash list</code></pre>
+    <small>This command displays the stash list and shows each stash named with an index number.</small>
+    <li><h4>Applying a Specific Stash:</h4></li>
+<pre><code># git stash apply stash_index_number
+git stash apply 0</code></pre>
+    <small>This applies the first stash in the stash list. The <code>apply</code> command applies the stash but does not delete it. 
+    If you want to apply and delete the stash simultaneously, you can use <code>git stash pop</code>.</small>
+    <li><h4>Applies and deletes the stash:</h4></li>
+<pre><code># git stash pop stash_index_number
+git stash pop 0</code></pre>
+    <small>This command applies the first stash from the stash list and deletes it.</small>
+    <li><h4>Inspecting a Specific Stash:</h4></li>
+<pre><code># git stash show stash_index_number
+git stash show 0</code></pre>
+    <small>This command shows the changes of the first stash in the stash list.</small>
+    <li><h4>Deleting All Stashes:</h4></li>
+<pre><code>git stash clear</code></pre>
+    <small>This command completely clears the stash list.</small>
+  </ol>
+</details>
+
+---
