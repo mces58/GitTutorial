@@ -451,3 +451,41 @@ git stash show 0</code></pre>
 </details>
 
 ---
+
+<h3><ins>05 Git Branching Model</ins></h3>
+
+<details>
+  <summary><code id="git_branch">git branch</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git branch</code> command is used to list branches, create new branches, switch between branches, and delete branches in a Git repository. 
+        Here are the basic usages and some examples of the <code>git branch</code> command:
+      </blockquote>
+      <li><h4>Listing Branches:</h4></li>
+<pre><code>git branch</code></pre>
+      <small>This command lists the current branches and shows which branch you are on. The active branch is indicated with an asterisk (*) symbol.</small>
+      <li><h4>Creating a New Branch:</h4></li>
+<pre><code># git branch new_branch_name
+git branch feature-xyz</code></pre>
+    <small>This command creates a new branch named <code>feature-xyz</code> but does not automatically switch to it. You continue working on the current branch.</small>
+    <li><h4>Change Branch (Checkout):</h4></li>
+<pre><code># # git checkout target_branch_name
+git checkout feature-xyz
+<br />
+# Alternatively, in Git 2.23 and later
+# The following command can also be used:
+# git switch target_branch_name
+git switch feature-xyz
+</code></pre>
+    <small><code>git checkout</code> and <code>git switch</code> commands allow you to leave the current branch and switch to another branch.</small>
+    <li><h4>Creating a New Branch and Switching:</h4></li>
+<pre><code># git checkout -b new_branch_name
+git checkout -b feature-abc</code></pre>
+    <small>This command creates a new branch named <code>feature-abc</code> and automatically switches to that branch.</small>
+    <li><h4>Deleting Branch:</h4></li>
+<pre><code># git branch -d branch_name_to_delete
+git branch -d feature-xyz</code></pre>
+    <small>This command deletes the branch named <code>feature-xyz</code>. However, if there are unmerged changes in this branch, the deletion 
+    will not proceed. You can forcefully delete the branch using <code>git branch -D</code>, but you should be cautious in this case.</small>
+  </ol>
+</details>
