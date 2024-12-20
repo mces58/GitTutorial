@@ -469,14 +469,13 @@ git stash show 0</code></pre>
 git branch feature-xyz</code></pre>
     <small>This command creates a new branch named <code>feature-xyz</code> but does not automatically switch to it. You continue working on the current branch.</small>
     <li><h4>Change Branch (Checkout):</h4></li>
-<pre><code># # git checkout target_branch_name
+<pre><code># git checkout target_branch_name
 git checkout feature-xyz
 <br />
 # Alternatively, in Git 2.23 and later
 # The following command can also be used:
 # git switch target_branch_name
-git switch feature-xyz
-</code></pre>
+git switch feature-xyz</code></pre>
     <small><code>git checkout</code> and <code>git switch</code> commands allow you to leave the current branch and switch to another branch.</small>
     <li><h4>Creating a New Branch and Switching:</h4></li>
 <pre><code># git checkout -b new_branch_name
@@ -489,3 +488,46 @@ git branch -d feature-xyz</code></pre>
     will not proceed. You can forcefully delete the branch using <code>git branch -D</code>, but you should be cautious in this case.</small>
   </ol>
 </details>
+
+<details>
+  <summary><code id="git_merge">git merge</code></summary>
+    <ol>
+      <blockquote>
+        <code>git merge</code> command is used to combine different branches. It is typically used when you want to add changes made on a feature branch 
+        to the <code>master</code> branch or merge changes from different branches. Here is the basic usage of the <code>git merge</code> command along with examples:
+      </blockquote>
+      <li><h4>Merging a Specific Branch into the Current Branch:</h4></li>
+<pre><code>git checkout master # switch to the branch to be merged
+git merge feature-xyz # merge feature-xyz branch into master branch
+<br />
+# or use with switch command
+git switch master
+git merge feature-xyz</code></pre>
+      <small>These commands merge the <code>feature-xyz</code> branch into the current branch.</small>
+      <li><h4>Fast Forward Merge:</h4></li>
+      <p>If the changes on a branch were made after the latest commit on the target branch (the branch to be merged), Git performs a 
+      'Fast Forward' merge. In this case, no separate commit is created.</p>
+<pre><code>git checkout master
+git merge feature-xyz</code></pre>
+    <small>This command merges the <code>master</code> branch into the <code>feature-xyz</code> branch. If a Fast Forward merge occurs, you will see that the <code>master</code> 
+    branch now points to the same commit as the <code>feature-xyz</code> branch's latest commit.</small>
+    <li><h4>Non-Fast Forward Merge:</h4></li>
+    <p>If there are changes made between the branch being merged and the target branch, and Fast Forward merge is not possible, 
+    Git will create a new commit to complete the merge.</p>
+<pre><code>git checkout master
+git merge --no-ff feature-xyz</code></pre>
+    <small>The <code>--no-ff</code> parameter forces a non-fast-forward merge, creating a new commit even if a fast-forward merge is possible.</small>
+    <li><h4>Handling Conflicting Changes:</h4></li>
+    <p>If there are conflicting changes during the merge process, Git will not be able to complete the merge automatically. In this case, manual intervention may be required.</p>
+<pre><code>git checkout master
+git merge feature-xyz</code></pre>
+    <small>If there are conflicts, Git will show you the conflicting files and ask you to resolve the conflicts by editing them. 
+    After resolving the conflicts, you can mark the files as resolved and proceed with the commit.</small>
+    <li><h4>Merge with a Specific Commit:</h4></li>
+<pre><code># git merge commit_id
+git merge abc123</code></pre>
+    <small>This merges the current branch with a specific commit.</small>
+  </ol>
+</details>
+
+---
