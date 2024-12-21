@@ -531,3 +531,34 @@ git merge abc123</code></pre>
 </details>
 
 ---
+
+<h3><ins>06 Inspect History</ins></h3>
+
+<details>
+  <summary><code id="git_log">git log</code></summary>
+    <ol>
+      <blockquote>
+        <code>git log</code> command is used to view the commit history of a Git repository. This command provides a list containing details such as commit 
+        IDs, authors, dates, and commit messages. Here are the basic usages and some examples of the <code>git log</code> command:
+      </blockquote>
+      <li><h4>Basic Usage:</h4></li>
+<pre><code>git log</code></pre>
+      <small>This command displays a series of information for each commit. Each commit's unique identifier (hash), author, date, and commit message are listed.</small>
+      <li><h4>Shortening Commit Information:</h4></li>
+<pre><code>git log --oneline</code></pre>
+    <small>This command displays only a shortened commit ID and the commit message for each commit.</small>
+    <li><h4>Graphical Representation:</h4></li>
+<pre><code>git log --oneline --graph</code></pre>
+    <small>This displays commits in a graphical format, showing branches and merges.</small>
+    <li><h4>Displaying Commit History for a Specific Directory or File:</h4></li>
+<pre><code># git log file_name
+git log index.html</code></pre>
+    <small>This command displays the commit history exclusively for the <code>index.html</code> file.</small>
+    <li><h4>Displaying Commits Up to a Specific Date:</h4></li>
+<pre><code>git log --until=2025-01-01</code></pre>
+    <small>This command lists the commits up to the specified date.</small>
+    <li><h4>Displaying the commits made by a specific author:</h4></li>
+<pre><code># git log --author="author_name"
+git log --author="mces58"</code></pre>
+  </ol>
+</details>
