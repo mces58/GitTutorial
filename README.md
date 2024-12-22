@@ -562,3 +562,37 @@ git log index.html</code></pre>
 git log --author="mces58"</code></pre>
   </ol>
 </details>
+
+<details>
+  <summary><code id="git_show">git show</code></summary>
+    <ol>
+      <blockquote>
+        <code>git show</code> command provides detailed information about a specific commit, branch, or tag in Git. This command displays the changes 
+        made in a commit, the commit message, and details about modified files. Below are the basic uses and examples of the <code>git show</code> command:
+      </blockquote>
+      <li><h4>Displaying a Specific Commit:</h4></li>
+<pre><code># git show commit_id
+git show abc123</code></pre>
+      <small>This command displays detailed information about the commit with the ID <code>abc123</code>, including the changes, commit message, and other details.</small>
+      <li><h4>Display the Last Commit:</h4></li>
+<pre><code>git show</code></pre>
+    <small>This command displays the details of the most recent commit. If you are working on HEAD, it shows the latest commit.</small>
+    <li><h4>Showing a Specific Branch or Tag:</h4></li>
+<pre><code># git show branch_name
+git show main
+# git show v1.0.0</code></pre>
+    <small>This command shows the details of the latest commit on the main branch. It can also be used for tags.</small>
+    <li><h4>Show changes for a specific file:</h4></li>
+<pre><code># git show commit_id file_name
+git show abc123 index.html</code></pre>
+    <small>This command shows the changes made to the <code>index.html</code> file in a specific commit.</small>
+    <li><h4>Show changes in color:</h4></li>
+<pre><code>git show --color commit_id</code></pre>
+    <small>This command displays the changes in color, making it easier to read.</small>
+    <li><h4>Line-by-Line Comparison of Changes:</h4></li>
+<pre><code>git show -v commit_id</code></pre>
+    <small>This command shows the changes in a specific commit, comparing them line by line.</small>
+  </ol>
+</details>
+
+---
