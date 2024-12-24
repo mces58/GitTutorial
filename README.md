@@ -596,3 +596,49 @@ git show abc123 index.html</code></pre>
 </details>
 
 ---
+
+<h3><ins>07 Tagging Commits</ins></h3>
+
+<details>
+  <summary><code id="git_tag">git tag</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git tag</code> command is used to add a tag to a specific commit or manage existing tags in a Git repository. Tags typically represent 
+        the name, version number, or description of a specific release or significant point in the repository's history. Here are the basic 
+        uses of the <code>git tag</code> command with examples:
+      </blockquote>
+      <li><h4>Creating a Tag:</h4></li>
+<pre><code># git tag tag_name
+git tag v1.0.0</code></pre>
+      <small>This command adds a tag named <code>v1.0.0</code> to the current HEAD commit.</small>
+      <li><h4>Adding a Tag to a Specific Commit:</h4></li>
+<pre><code># git tag tag_name commit_id
+git tag v1.0.0 abc123</code></pre>
+    <small>This command adds a tag named <code>v1.0.0</code> to a specific commit (here represented as <code>abc123</code>).</small>
+    <li><h4>Creating Annotated Tags:</h4></li>
+<pre><code># git tag -a tag_name -m "Tag Description"
+git tag -a v1.0.0 -m "Stable version"</code></pre>
+    <small>This command creates a tag named <code>v1.0.0</code> with a description.</small>
+    <li><h4>Listing Tags:</h4></li>
+<pre><code>git tag</code></pre>
+    <small>This command lists available tags.</small>
+    <li><h4>Showing a Specific Label Version:</h4></li>
+<pre><code># git show tag_name
+git show v1.0.0</code></pre>
+    <small>This command shows the details of the tag named <code>v1.0.0</code>.</small>
+    <li><h4>Deleting a Specific Tag:</h4></li>
+<pre><code># git tag -d tag_name
+git tag -d v1.0.0</code></pre>
+    <small>This command deletes the tag named <code>v1.0.0</code> locally.</small>
+    <li><h4>Push Tag to Remote Repository:</h4></li>
+<pre><code># git push remote_repo tag_name
+git push origin v1.0.0</code></pre>
+    <small>This command pushes a specific tag to the remote repository.</small>
+    <li><h4>Push All Tags to Remote Repository:</h4></li>
+<pre><code># git push remote_repo --tags
+git git push origin --tags</code></pre>
+    <small>This command sends all tags to the remote repository.</small>
+  </ol>
+</details>
+
+--
