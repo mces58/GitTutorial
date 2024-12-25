@@ -642,3 +642,37 @@ git git push origin --tags</code></pre>
 </details>
 
 ---
+
+<h3><ins>08 Reverting Changes</ins></h3>
+
+<details>
+  <summary><code id="git_reset">git reset [&lt;path&gt;...]</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git reset</code> command is used to modify the commit history of a branch and revert files in the working directory. 
+        This command should be used carefully, as it changes history and is generally not recommended on shared branches. 
+        Here are the basic uses and examples of the <code>git reset</code> command:
+      </blockquote>
+      <li><h4>Reverting Commits:</h4></li>
+<pre><code># git reset commit_id
+git reset abc123</code></pre>
+      <small>This command reverts commits up to the <code>abc123</code> commit ID. By default, <code>git reset</code> performs a 'soft reset,' meaning it 
+      reverts commits without modifying files in the working directory.</small>
+      <li><h4>Reverting Files:</h4></li>
+<pre><code># git reset --hard commit_id
+git reset --hard abc123</code></pre>
+    <small>This command reverts commits up to the specified commit and also modifies the files in the working directory. 
+    This operation is irreversible, so it should be used with caution.</small>
+    <li><h4>Reverting Commits with a Soft Reset:</h4></li>
+<pre><code># git reset --soft commit_id
+git reset --soft abc123</code></pre>
+    <small>This command reverts commits without altering the files in the working directory. It's useful when you want to undo commits but retain the changes in your files.</small>
+    <li><h4>Mixed Reset to Revert Commits and Staging Area (Default):</h4></li>
+<pre><code># git reset --mixed commit_id
+git reset abc123</code></pre>
+    <small>This command reverts the commits and modifies the files but clears the Staging Area.</small>
+    <li><h4>Reverting to the Previous Commit:</h4></li>
+<pre><code>git reset --hard HEAD^</code></pre>
+    <small>This command reverts to the previous commit.</small>
+  </ol>
+</details>
