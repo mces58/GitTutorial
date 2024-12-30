@@ -676,3 +676,27 @@ git reset abc123</code></pre>
     <small>This command reverts to the previous commit.</small>
   </ol>
 </details>
+
+<details>
+  <summary><code id="git_revert">git revert</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git revert</code> command allows you to undo changes from one or more commits by creating a new commit. This method undoes 
+        changes without altering the commit history, providing a reversible mechanism for reverting changes. Here are the basic uses and 
+        examples of the <code>git revert</code> command:
+      </blockquote>
+      <li><h4>Reverting a Specific Commit:</h4></li>
+<pre><code># git revert commit_id
+git revert abc123</code></pre>
+      <small>This command reverts the changes made in the <code>abc123</code> commit and creates a new commit.</small>
+      <li><h4>Reverting Multiple Commits:</h4></li>
+<pre><code># git revert commit_id1 commit_id2
+git revert abc123 def456</code></pre>
+    <small>This reverts the changes from both commits <code>abc123</code> and <code>def456</code> and creates separate commits for each revert operation.</small>
+    <li><h4>Adding a description to the revert commit:</h4></li>
+    <p>While performing a revert operation, you can add a description to the new commit using the <code>-m</code> or <code>--mainline</code> option. This specifies 
+    which parent branch to revert when dealing with a merge commit</p>
+<pre><code># git revert -m 1 commit_id
+git revert -m 1 abc123</code></pre>
+  </ol>
+</details>
