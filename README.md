@@ -700,3 +700,37 @@ git revert abc123 def456</code></pre>
 git revert -m 1 abc123</code></pre>
   </ol>
 </details>
+
+<details>
+  <summary><code id="git_restore">git restore</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git restore</code> command is used to restore files or changes in the working directory or revert them to a specific 
+        commit state. Introduced in Git version 2.23, it serves as a replacement for the <code>git reset</code> and <code>git checkout</code> commands. 
+        Here are the basic usages and examples of the <code>git restore</code> command:
+      </blockquote>
+      <li><h4>Restoring Files in the Working Directory:</h4></li>
+<pre><code># git restore file_name
+git restore index.html</code></pre>
+      <small>This command restores changes in the <code>index.html</code> file from the working directory.</small>
+      <li><h4>Reverting to a Specific Commit State:</h4></li>
+<pre><code># git restore --source=commit_id --staged --worktree file_name
+git restore --source=abc123 --staged --worktree index.html</code></pre>
+    <small>This command reverts the changes of a specific file in the working directory and Staging Area to the state of the commit_id commit.</small>
+    <li><h4>Undo All Changes:</h4></li>
+<pre><code>git restore --source=commit_id --staged --worktree --source=commit_id .</code></pre>
+    <small>This command reverts the changes of all files in the working directory and Staging Area to the state of the commit_id commit.</small>
+    <li><h4>Cancel changes in the working directory:</h4></li>
+<pre><code># git restore --source=HEAD --worktree file_name
+git restore --source=HEAD --worktree index.html</code></pre>
+    <small>This command cancels the changes in a specific file in the working directory.</small>
+    <li><h4>Reverting Files to a Specific Commit State:</h4></li>
+<pre><code>git restore --source=commit_id --staged --worktree --source=commit_id file_name</code></pre>
+    <small>This command reverts the changes of a specific file in the working directory and Staging Area to a particular commit state.</small>
+    <li><h4>Revert All Changes:</h4></li>
+<pre><code>git restore --source=commit_id --staged --worktree --source=commit_id .</code></pre>
+    <small>This command reverts the changes of all files in the working directory and Staging Area to a particular commit state.</small>
+  </ol>
+</details>
+
+---
