@@ -734,3 +734,41 @@ git restore --source=HEAD --worktree index.html</code></pre>
 </details>
 
 ---
+
+<h3><ins>09 Synchronizing Repositories</ins></h3>
+
+<details>
+  <summary><code id="git_remote">git remote</code></summary>
+    <ol>
+      <blockquote>
+        The <code>git remote</code> command is used to manage remote repositories, which are often centralized locations where the project is stored or shared. 
+        This command allows you to view, add, remove, and modify remote repositories. Below are the basic uses and examples of the <code>git remote</code> command:
+      </blockquote>
+      <li><h4>Listing Remote Repositories:</h4></li>
+<pre><code>git remote</code></pre>
+      <small>This command lists the names of the remote repositories defined in your project.</small>
+      <li><h4>Listing Remote Repositories in More Detail:</h4></li>
+<pre><code>git remote -v</code></pre>
+    <small>This command lists the names and connection URLs of the remote repositories in more detail.</small>
+    <li><h4>Adding a Remote Repository:</h4></li>
+<pre><code># git remote add remote_repo_name remote_repo_url
+git remote add origin https://github.com/username/project.git</code></pre>
+    <small>This command adds a new remote repository. origin typically represents the main repository address of the project.</small>
+    <li><h4>Updating a Remote Repository Name:</h4></li>
+<pre><code># git remote rename old_name new_name
+git remote rename upstream origin</code></pre>
+    <small>This command changes the name of a remote repository.</small>
+    <li><h4>Removing a Remote Repository Name:</h4></li>
+<pre><code># git remote remove remote_repo_name
+git remote remove origin</code></pre>
+    <small>This command removes the specified remote repository from the project.</small>
+    <li><h4>Displaying a Remote Repository Name or URL:</h4></li>
+<pre><code># git remote show remote_repo_name
+git remote show origin</code></pre>
+    <small>This command displays detailed information about the specified remote repository, such as which branches it is tracking.</small>
+    <li><h4>Updating the URL of a Remote Repository:</h4></li>
+<pre><code># git remote set-url remote_repo_name new_url
+git remote set-url origin https://new-address.com/username/project.git</code></pre>
+    <small>This command sets a new URL for the specified remote repository.</small>
+  </ol>
+</details>
